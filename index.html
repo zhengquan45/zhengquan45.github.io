@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春日里餐厅 | 师大专属订餐</title>
+    <style>
+        :root {
+            --primary-color: #E63946;  /* 主色调-品牌红 */
+            --secondary-color: #2A9D8F;  /* 辅助色-青绿色 */
+            --background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: var(--background);
+            color: #4a4a4a;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .main-title {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin: 0.5rem 0;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+        }
+
+        /* 主二维码区域 */
+        .main-qrcode {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .primary-qrcode {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            display: inline-block;
+        }
+
+        .primary-qrcode img {
+            width: auto; 
+            height: auto;
+            max-width: 400px;
+            border: 3px solid var(--secondary-color);
+            border-radius: 15px;
+        }
+
+        .qrcode-label {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        /* 底部微信二维码 */
+        .contact-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .wechat-qrcode {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        .wechat-qrcode img {
+            width: auto;
+            height: auto;
+            max-width: 300px;
+            border: 2px solid #eee;
+            border-radius: 12px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            .primary-qrcode img {
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="餐厅Logo" class="logo">
+        <h1 class="main-title">春日里餐厅</h1>
+    </header>
+
+    <div class="main-qrcode">
+        <div class="primary-qrcode">
+            <h2 class="qrcode-label">师大订餐群</h2>
+            <img src="assets/group-qrcode.jpg" alt="订餐群二维码">
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <div class="wechat-qrcode">
+            <h2 style="color:var(--secondary-color); margin-bottom:1.5rem">店主微信</h2>
+            <img src="assets/wechat-qrcode.jpg" alt="微信二维码">
+        </div>
+
+        <div class="contact-info">
+            <p>急需订餐请致电：<span class="highlight">156-0156-8360</span></p>
+            <p>营业时间：6:00 - 24:00（周一到周五）</p>
+        </div>
+    </div>
+</body>
+</html>
