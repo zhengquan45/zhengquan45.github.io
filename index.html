@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>春日里餐厅 | 师大专属订餐</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>春日里餐厅</title>
     <style>
         :root {
-            --primary-color: #E63946;  /* 主色调-品牌红 */
-            --secondary-color: #2A9D8F;  /* 辅助色-青绿色 */
+            --primary-color: #E63946; /* 主色调-品牌红 */
+            --secondary-color: #2A9D8F; /* 辅助色-青绿色 */
             --background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
         }
 
@@ -23,7 +23,7 @@
             text-align: center;
             padding: 3rem 0 2rem;
             background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
@@ -50,24 +50,33 @@
 
         /* 主二维码区域 */
         .main-qrcode {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 3rem auto;
             padding: 0 20px;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
         }
 
         .primary-qrcode {
-            background: white;
+            background: #ffffffcc;
             border-radius: 20px;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 400px;
+        }
+
+        .primary-qrcode:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .primary-qrcode img {
-            width: auto; 
+            width: 100%;
             height: auto;
-            max-width: 400px;
             border: 3px solid var(--secondary-color);
             border-radius: 15px;
         }
@@ -75,8 +84,25 @@
         .qrcode-label {
             color: var(--primary-color);
             font-size: 2rem;
-            margin: 1.5rem 0;
-            position: relative;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .qrcode-tip {
+            font-size: 1.05rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        .tip-highlight {
+            color: var(--secondary-color);
+            font-weight: 500;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.6; transform: scale(1); }
         }
 
         /* 底部微信二维码 */
@@ -93,9 +119,9 @@
         }
 
         .wechat-qrcode img {
-            width: auto;
-            height: auto;
+            width: 100%;
             max-width: 300px;
+            height: auto;
             border: 2px solid #eee;
             border-radius: 12px;
         }
@@ -117,40 +143,42 @@
             .main-title {
                 font-size: 2rem;
             }
-            .primary-qrcode img {
-                max-width: 280px;
+
+            .primary-qrcode {
+                max-width: 90%;
             }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <img src="assets/logo.jpg" alt="餐厅Logo" class="logo">
+        <img src="assets/logo.jpg" alt="餐厅Logo" class="logo" />
         <h1 class="main-title">春日里餐厅</h1>
     </header>
 
     <div class="main-qrcode">
         <div class="primary-qrcode">
             <h2 class="qrcode-label">红星商务大厦订餐群</h2>
-            <img src="assets/hx-group-qrcode.jpg" alt="订餐群二维码">
+            <img src="assets/hx-group-qrcode.jpg" alt="红星商务大厦订餐群二维码" />
+            <p class="qrcode-tip tip-highlight">📱 长按二维码加入订餐群</p>
         </div>
-    </div>
-     <div class="main-qrcode">
+
         <div class="primary-qrcode">
             <h2 class="qrcode-label">师大订餐群</h2>
-            <img src="assets/group-qrcode.jpg" alt="订餐群二维码">
+            <img src="assets/group-qrcode.jpg" alt="师大订餐群二维码" />
+            <p class="qrcode-tip tip-highlight">超200人加店主微信</p>
         </div>
     </div>
 
     <div class="contact-section">
         <div class="wechat-qrcode">
-            <h2 style="color:var(--secondary-color); margin-bottom:1.5rem">店主微信</h2>
-            <img src="assets/wechat-qrcode.jpg" alt="微信二维码">
+            <h2 style="color: var(--secondary-color); margin-bottom: 1.5rem;">店主微信</h2>
+            <img src="assets/wechat-qrcode.jpg" alt="微信二维码" />
         </div>
 
         <div class="contact-info">
             <p>急需订餐请致电：<span class="highlight">156-0156-8360</span></p>
-            <p>营业时间：6:00 - 24:00（周一到周五）</p>
+            <p>营业时间：周一到周五</p>
         </div>
     </div>
 </body>
