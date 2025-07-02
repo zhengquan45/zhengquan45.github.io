@@ -148,6 +148,38 @@
                 max-width: 90%;
             }
         }
+        .xhs-card {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.xhs-card a {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.xhs-card a:hover {
+    background-color: #c62828;
+    transform: translateY(-2px);
+}
+
+.xhs-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.6rem;
+    border-radius: 4px;
+    background: white;
+}
+
     </style>
 </head>
 <body>
@@ -175,6 +207,13 @@
             <h2 style="color: var(--secondary-color); margin-bottom: 1.5rem;">店主微信</h2>
             <img src="assets/wechat-qrcode.jpg" alt="微信二维码" />
         </div>
+        <div class="xhs-card">
+    <a href="https://www.xiaohongshu.com/user/profile/65290012000000002a02a9fc" target="_blank" rel="noopener noreferrer">
+        <img src="assets/logo.jpg" alt="小红书Logo" class="xhs-logo" />
+        <span class="xhs-text">查看餐品图 & 用户评价 · 小红书</span>
+    </a>
+</div>
+
 
         <div class="contact-info">
             <p>急需订餐请致电：<span class="highlight">156-0156-8360</span></p>
